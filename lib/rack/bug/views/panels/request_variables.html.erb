@@ -1,3 +1,25 @@
+<% unless server.empty? %>
+  <h3>Server</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+	  <% server.each do |key, value| %>
+        <tr class="<%= i % 2 == 0 ? "even" : "odd" %>">
+          <td><%=h key %></td>
+          <td class="code"><div><%=h val %></div></td>
+        </tr>
+		<% end %>
+    </tbody>
+  </table>
+<% end %>
+
+
+
 <% if request.GET.any? %>
   <h3>GET</h3>
   <table>
