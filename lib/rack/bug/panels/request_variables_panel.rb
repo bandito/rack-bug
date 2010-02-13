@@ -16,7 +16,7 @@ module Rack
       end
       
       def content
-        render_template "panels/request_variables", :request => @request, :env => @env, :server => {:hostname => `hostname`}
+        render_template "panels/request_variables", :request => @request, :env => @env, :server_vars => {:hostname => `hostname`.strip}
       end
 
     end

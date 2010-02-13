@@ -1,4 +1,4 @@
-<% unless server.empty? %>
+<% unless server_vars.empty? %>
   <h3>Server</h3>
   <table>
     <thead>
@@ -8,11 +8,13 @@
       </tr>
     </thead>
     <tbody>
-	  <% server.each do |key, value| %>
+    <% i = 1 %>
+	  <% server_vars.each do |key, value| %>
         <tr class="<%= i % 2 == 0 ? "even" : "odd" %>">
           <td><%=h key %></td>
-          <td class="code"><div><%=h val %></div></td>
+          <td class="code"><div><%=h value %></div></td>
         </tr>
+        <% i += 1 %>
 		<% end %>
     </tbody>
   </table>
