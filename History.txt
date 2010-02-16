@@ -1,0 +1,2 @@
+Added Hostname in RackEnv
+Added MongoDB and Sphinx Panels
