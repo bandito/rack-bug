@@ -20,7 +20,7 @@ module Rack
 
           def decode_message(m)
             @m = m.clone
-            params = OrderedHash.new
+            params = ActiveSupport::OrderedHash.new
 
             params[:offset] = consume_int
             params[:limit] = consume_int
